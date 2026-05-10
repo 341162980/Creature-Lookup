@@ -16,7 +16,7 @@ HOW TO USE:
 
 TO DOS: 
 
-    -include documentation and github location
+    -Take images of site on github, test on another device
 
 
 Technologies Used
