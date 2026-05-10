@@ -1,32 +1,29 @@
-Install pandas: "pip install pandas" or "pip3 install pandas"
-
-Install flask: "pip install flask"
-
-
-For wikipedia images, user must run: "pip install wikipedia-api requests"
-and "pip install requests"
-
-For world map images, user must run: "pip install geopandas matplotlib"
-and "pip install geodatasets"
-
-    -dataset comes from Natural Earth (built into geopandas)
-
+Creature Lookup is a Flask web app that serves as an interactive animal encyclopedia. 
+It has pages which:
+Search for any animal in the database to view its stats, habitat map, image, and other details.
+Search an animal to see a visual diagram of its food chain.
+Generate graphs and visuals from the dataset using customizable inputs.
+Allow users to submit a new animal request or a data change request
 
 HOW TO USE: 
 
--open in vs code
--user needs python on environment first
-run "pip install -r requirements.txt"
-
-Type "python3 app.py" (must be ran for link to work)
-
-Open your browser and go to: "http://127.0.0.1:5000"
-
-- "ctrl c" to quit
-
+1. Install VS Code
+2. Install Python from python.org or via VS Code
+3. Open terminal and run the command: pip install -r requirements.txt
+4. Then, run: python app.py
+5. Open http://127.0.0.1:5000 in your browser
+6. To quit, type ctrl c in the terminal and the web server will close
 
 TO DOS: 
 
     -include documentation and github location
 
 
+Technologies Used
+
+Python & Flask — backend routing, search, and data processing
+Pandas — data loading, filtering, and preprocessing
+Wikipedia API (Requests) — dynamic animal image fetching
+GeoPandas & Natural Earth — habitat map generation
+Matplotlib & NumPy — graph and heatmap generation
+HTML, CSS, JavaScript — frontend design and interactivity

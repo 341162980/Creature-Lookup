@@ -1,0 +1,13 @@
+Install pandas: "pip install pandas" or "pip3 install pandas"
+
+Install flask: "pip install flask"
+
+
+For wikipedia images, user must run: "pip install wikipedia-api requests"
+and "pip install requests"
+
+For world map images, user must run: "pip install geopandas matplotlib"
+and "pip install geodatasets"
+
+    -dataset comes from Natural Earth (built into geopandas)
+
