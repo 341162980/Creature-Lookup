@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creature Lookup</title>
+
+    <!--link to contribute.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contribute.css') }}">
+
+    <!--link to font awesome (for logo)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        
+        <div class="logo"> Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <form method="POST" action="/" class="search-wrapper">
+            <input type="text" name="animal"
+                class="search-input"
+                placeholder="Enter animal name"
+                required autocomplete="off">
+
+            <button type="submit">Search</button>
+
+            <div class="suggestions"></div>
+        </form>
+
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5000">Home</a>
+            <a href="List-of-Animals">List of Animals</a>
+            <a href="/food-chains">Food Chains</a>
+            <a href="/graphs">Plots</a>
+            <a href="/contribute">Contribute</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <!-- HERO  -->
+    <div class="hero">
+
+        <h1 id="hero-text-1">Here, you can contribute to the site yourself! Don't see your 
+            favourite animal? See some info that's not entirely accurate? 
+        </h1>
+
+        <h1 id="hero-text-2">
+            Feel free to use this page and submit change requests to
+            the dataset. Changes won't always be granted but upon review,
+            you might just see your request make it onto the site.
+        </h1>
+        
+
+        <!-- LEFT SIDE PAWS -->
+        <div class="paw-side paw-left">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE PAWS -->
+        <div class="paw-side paw-right">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <!-- BUTTONS VIEW -->
+        <div id="buttons-view" class="button-container">
+            <button class="contribute-btn" onclick="showForm('new-animal-form')">New Animal Request</button>
+            <button class="contribute-btn" onclick="showForm('data-change-form')">Data Change Request</button>
+        </div>
+
+        <!-- NEW ANIMAL FORM -->
+        <div id="new-animal-form" class="form-view">
+            <h2>Fill in your animal's data below. Follow a similar format as the example 
+                shown — keep commas between values, don't enter units, and for quantitative
+                values, you can enter exact numbers or a range (e.g. "10-20"). 
+            </h2>
+
+            <h2>    
+                For entries with multiple values, 
+                make sure to put them between quotatations (e.g. "Mexico, South America").
+                Leave a field as "Unknown" if you're unsure. You can add your input on the line
+                below the Bengal Tiger example.
+            </h2>
+
+            <h2>    
+                Once you click submit, it will open a new tab allowing you to send your new
+                animal entry to my email. Then, I can process this request and it will be added 
+                to the site database if it can pass all validation tests. 
+
+            </h2>
+
+            <textarea id="new-animal-text" class="contribution-textarea" rows="20">
+Animal,Height (cm),Weight (kg),Color,Lifespan (years),Diet,Habitat,Predators,Average Speed (km/h),Countries Found,Conservation Status,Family,Gestation Period (days),Top Speed (km/h),Social Structure,Offspring per Birth,Food
+Bengal Tiger,90-110,220-260,"Orange, Black",10-15,Carnivore,"Grasslands, Mangroves","Humans, Crocodiles",65,"India, Bangladesh, Nepal",Endangered,Felidae,104-106,65,Solitary,2-4,"Deer, wild boar, water buffalo"
+</textarea>
+
+            <div class="form-buttons">
+                <button class="contribute-btn" onclick="hideForm('new-animal-form')">Cancel</button>
+                <button class="contribute-btn" onclick="submitViaEmail()">Submit</button>
+            </div>
+        </div>
+
+        <!-- DATA CHANGE FORM -->
+        <div id="data-change-form" class="form-view">
+            <h2>Type in the box what changes you want made to the dataset. Specify which animal(s) the change is for,
+                which column(s) to change, what new values they want and an explanation for why they are requesting the change.
+            </h2>
+
+            <h2>    
+                Once you click submit, it will open a new tab allowing you to send your data change
+                request to my email. Then, I can process this request and it will be added 
+                to the site database if it can pass all validation tests. 
+            </h2>
+
+            <textarea id="data-change-text" class="contribution-textarea" rows="20">
+</textarea>
+
+            <div class="form-buttons">
+                <button class="contribute-btn" onclick="hideForm('data-change-form')">Cancel</button>
+                <button class="contribute-btn" onclick="submitChangeViaEmail()">Submit</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results">
+                <!--Jinja, Flask’s templating language-->
+        {% if animal %}         <!--If "animal" is not empty, run the code below-->
+            <div class="card">
+
+                {#  Jinja expression: {{ }} means "insert a Python value here".
+                animal["Animal"]: Look up value of key "Animal" in dictionary and print it. #}
+                <h2>{{ animal["Animal"] }}</h2> 
+                
+                <p><strong>Height (cm) :</strong> {{ animal["Height (cm)"] }} cm</p>
+                <p><strong>Weight (Kg) :</strong> {{ animal["Weight (kg)"] }} kg</p>
+                <p><strong>Color:</strong> {{ animal["Color"] }}</p>
+                <p><strong>Lifespan (years) :</strong> {{ animal["Lifespan (years)"] }} years</p>
+                <p><strong>Diet:</strong> {{ animal["Diet"] }}</p>
+                <p><strong>Habitat:</strong> {{ animal["Habitat"] }}</p>
+                <p><strong>Predators:</strong> {{ animal["Predators"] }}</p>
+                <p><strong>Average Speed (km/h) :</strong> {{ animal["Average Speed (km/h)"] }} km/h</p>
+                <p><strong>Top Speed (km/h) :</strong> {{ animal["Top Speed (km/h)"] }} km/h</p>
+                <p><strong>Countries Found:</strong> {{ animal["Countries Found"] }}</p>
+                <p><strong>Conservation Status:</strong> {{ animal["Conservation Status"] }}</p>
+                <p><strong>Family:</strong> {{ animal["Family"] }}</p>
+                <p><strong>Gestation Period (days) :</strong> {{ animal["Gestation Period (days)"] }} days</p>
+                <p><strong>Social Structure:</strong> {{ animal["Social Structure"] }}</p>
+                <p><strong>Offspring per Birth:</strong> {{ animal["Offspring per Birth"] }}</p>
+            </div>
+        {% elif searched %}     <!--animal not found-->
+            <p style="color: #100f0fff; font-weight: bold; : center;
+            font-size: 24px;">
+                ❌ Search not found. Check for typos in your search or see the full list for exact animal names.
+            </p>
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo">Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/">Dataset</a>
+                <span>© 2026 All rights reserved</span>
+        </div>
+
+    </footer>
+
+    <!--link to index_js.js -->
+    <script src="{{ url_for('static', filename='js/index_js.js') }}"></script>
+
+</body>
+
+
+</html>

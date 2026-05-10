@@ -1,0 +1,969 @@
+{
+    "Aardvark": [
+        "ants",
+        "termites",
+        "larvae"
+    ],
+    "Aardwolf": [
+        "termites",
+        "ants",
+        "larvae"
+    ],
+    "African Elephant": [
+        "grass",
+        "leaves",
+        "fruits"
+    ],
+    "African Lion": [
+        "Zebra",
+        "Wildebeest",
+        "water Buffalo"
+    ],
+    "African Wild Dog": [
+        "Impala",
+        "wildebeest",
+        "gazelle"
+    ],
+    "Alpine Ibex": [
+        "grass",
+        "leaves",
+        "shrubs"
+    ],
+    "Amazon Rainforest Frog": [
+        "ants",
+        "beetles",
+        "termites"
+    ],
+    "American Bison": [
+        "grass",
+        "leaves",
+        "shrubs"
+    ],
+    "Anteater": [
+        "ants",
+        "termites",
+        "larvae"
+    ],
+    "Arabian Horse": [
+        "hay",
+        "grass",
+        "oats"
+    ],
+    "Arabian Oryx": [
+        "grass",
+        "leaves",
+        "shrubs"
+    ],
+    "Arctic Fox": [
+        "lemmings",
+        "birds",
+        "berries"
+    ],
+    "Arowana": [
+        "fish",
+        "shrimp",
+        "insects"
+    ],
+    "Asian Elephant": [
+        "grass",
+        "leaves",
+        "fruits"
+    ],
+    "Atlantic Puffin": [
+        "sand eels",
+        "herring",
+        "capelin"
+    ],
+    "Atlantic Spotted Dolphin": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Australian Fur Seal": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Axolotl": [
+        "worm",
+        "fish",
+        "insects"
+    ],
+    "Aye-Aye": [
+        "insects",
+        "fruits",
+        "nectar"
+    ],
+    "Baird's Tapir": [
+        "leaves",
+        "fruits",
+        "grass"
+    ],
+    "Bald Eagle": [
+        "fish",
+        "small mammals",
+        "waterfowl"
+    ],
+    "Banded Palm Civet": [
+        "fruits",
+        "insects",
+        "small mammals"
+    ],
+    "Barbary Macaque": [
+        "leaves",
+        "fruits",
+        "seeds"
+    ],
+    "Basking Shark": [
+        "plankton",
+        "fish",
+        "krill"
+    ],
+    "Bearded Dragon": [
+        "crickets",
+        "leaves",
+        "mealworm"
+    ],
+    "Bengal Fox": [
+        "insects",
+        "small mammals",
+        "fruits"
+    ],
+    "Bengal Tiger": [
+        "Deer",
+        "wild boar",
+        "water buffalo"
+    ],
+    "Black Rhinoceros": [
+        "leaves",
+        "shrubs",
+        "grass"
+    ],
+    "Blobfish": [
+        "Crustaceans",
+        "mollusks",
+        "sea urchins"
+    ],
+    "Blue Jay": [
+        "insects",
+        "seeds",
+        "berries"
+    ],
+    "Blue Morpho Butterfly": [
+        "leaves",
+        "flowers",
+        "fruit"
+    ],
+    "Blue Whale": [
+        "krill",
+        "copepods",
+        "fish"
+    ],
+    "Blue-Footed Booby": [
+        "fish",
+        "anchovies",
+        "mackerel"
+    ],
+    "Blue-Ringed Octopus": [
+        "crabs",
+        "shrimp",
+        "fish"
+    ],
+    "Bonobo": [
+        "fruits",
+        "leaves",
+        "seeds"
+    ],
+    "Bornean Orangutan": [
+        "fruits",
+        "leaves",
+        "flowers"
+    ],
+    "Bottlenose Dolphin": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Boxer Dog": [
+        "beef",
+        "chicken",
+        "carrots"
+    ],
+    "Brazilian Wandering Spider": [
+        "insects",
+        "small mammals",
+        "frogs"
+    ],
+    "Brown Bear": [
+        "berries",
+        "fish",
+        "roots"
+    ],
+    "Burmese Python": [
+        "rodents",
+        "rabbits",
+        "birds"
+    ],
+    "Capybara": [
+        "grass",
+        "aquatic plants",
+        "fruits"
+    ],
+    "Cheetah": [
+        "Gazelles",
+        "Impala",
+        "Springbok"
+    ],
+    "Chimpanzee": [
+        "fruits",
+        "leaves",
+        "insects"
+    ],
+    "Chinese Giant Salamander": [
+        "fish",
+        "crustaceans",
+        "amphibians"
+    ],
+    "Clownfish": [
+        "zooplankton",
+        "algae",
+        "small crustaceans"
+    ],
+    "Coelacanth": [
+        "fish",
+        "crustaceans",
+        "cephalopods"
+    ],
+    "Common Dolphin": [
+        "fish",
+        "anchovies",
+        "mackerel"
+    ],
+    "Common Snapping Turtle": [
+        "fish",
+        "insects",
+        "aquatic plants"
+    ],
+    "Coquerel's Sifaka": [
+        "leaves",
+        "fruits",
+        "flowers"
+    ],
+    "Dalmatian Dog": [
+        "meat",
+        "vegetables",
+        "grains"
+    ],
+    "Dhole": [
+        "Deer",
+        "wild boar",
+        "small mammals"
+    ],
+    "Dingo": [
+        "Rabbits",
+        "kangaroos",
+        "wallabies"
+    ],
+    "Dugong": [
+        "Seagrass",
+        "algae",
+        "mangroves"
+    ],
+    "Eastern Gorilla": [
+        "leaves",
+        "fruits",
+        "stems"
+    ],
+    "Echidna": [
+        "ants",
+        "termites",
+        "earthworm"
+    ],
+    "Electric Eel": [
+        "fish",
+        "crustaceans",
+        "amphibians"
+    ],
+    "Emperor Penguin": [
+        "krill",
+        "fish",
+        "squid"
+    ],
+    "Emperor Tamarin": [
+        "insects",
+        "fruits",
+        "leaves"
+    ],
+    "European Hedgehog": [
+        "insects",
+        "earthworm",
+        "fruits"
+    ],
+    "Fennec Fox": [
+        "insects",
+        "rodents",
+        "fruits"
+    ],
+    "Fire Salamander": [
+        "insects",
+        "worm",
+        "small amphibians"
+    ],
+    "Flying Fox": [
+        "fruit",
+        "nectar",
+        "flowers"
+    ],
+    "Fossa": [
+        "Lemurs",
+        "birds",
+        "small mammals"
+    ],
+    "Frilled Lizard": [
+        "insects",
+        "leaves",
+        "flowers"
+    ],
+    "Galápagos Penguin": [
+        "fish",
+        "crustaceans",
+        "squid"
+    ],
+    "Galápagos Tortoise": [
+        "cactus pads",
+        "grass",
+        "leaves"
+    ],
+    "Galliformes": [
+        "seeds",
+        "insects",
+        "leaves"
+    ],
+    "Gaur": [
+        "grass",
+        "leaves",
+        "fruits"
+    ],
+    "Gerenuk": [
+        "leaves",
+        "shoots",
+        "flowers"
+    ],
+    "Gharial": [
+        "fish",
+        "crustaceans",
+        "frogs"
+    ],
+    "Giant Pacific Octopus": [
+        "crabs",
+        "shrimp",
+        "fish"
+    ],
+    "Giant Panda": [
+        "bamboo",
+        "leaves",
+        "fruits"
+    ],
+    "Gila Monster": [
+        "small mammals",
+        "birds",
+        "egg"
+    ],
+    "Glass Frog": [
+        "insects",
+        "larvae",
+        "spiders"
+    ],
+    "Goblin Shark": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Golden Lion Tamarin": [
+        "insects",
+        "fruits",
+        "small vertebrates"
+    ],
+    "Golden Poison Dart Frog": [
+        "ants",
+        "termites",
+        "beetles"
+    ],
+    "Great White Shark": [
+        "seal",
+        "sea lions",
+        "fish"
+    ],
+    "Green Anaconda": [
+        "Capybara",
+        "deer",
+        "birds"
+    ],
+    "Green Sea Turtle": [
+        "seagrass",
+        "algae",
+        "seaweed"
+    ],
+    "Grevy's Zebra": [
+        "grass",
+        "leaves",
+        "herbs"
+    ],
+    "Hagfish": [
+        "marine invertebrates",
+        "carrion"
+    ],
+    "Harp Seal": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Harpy Eagle": [
+        "sloths",
+        "monkeys",
+        "birds"
+    ],
+    "Hippopotamus": [
+        "grass",
+        "leaves",
+        "fruits"
+    ],
+    "Horseshoe Crab": [
+        "mollusks",
+        "crustaceans",
+        "marine worm"
+    ],
+    "Hummingbird": [
+        "nectar",
+        "insects",
+        "pollen"
+    ],
+    "Humpback Whale": [
+        "krill",
+        "fish",
+        "plankton"
+    ],
+    "Iberian Lynx": [
+        "rabbits",
+        "birds",
+        "rodents"
+    ],
+    "Indri": [
+        "leaves",
+        "fruits",
+        "flowers"
+    ],
+    "Japanese Giant Hornet": [
+        "honeybees",
+        "caterpillars",
+        "insects"
+    ],
+    "Japanese Macaque": [
+        "leaves",
+        "fruits",
+        "insects"
+    ],
+    "Kakapo": [
+        "leaves",
+        "fruits",
+        "seeds"
+    ],
+    "Kangaroo Rat": [
+        "seeds",
+        "leaves",
+        "grass"
+    ],
+    "King Cobra": [
+        "rodents",
+        "lizards",
+        "snakes"
+    ],
+    "Kiwi": [
+        "insects",
+        "worm",
+        "fruits"
+    ],
+    "Komodo Dragon": [
+        "deer",
+        "wild boar",
+        "carrion"
+    ],
+    "Leaf-tailed Gecko": [
+        "crickets",
+        "moths",
+        "beetles"
+    ],
+    "Leafy Sea Dragon": [
+        "small crustaceans",
+        "shrimp",
+        "plankton"
+    ],
+    "Lemur": [
+        "fruits",
+        "leaves",
+        "insects"
+    ],
+    "Lion-tailed Macaque": [
+        "leaves",
+        "fruits",
+        "flowers"
+    ],
+    "Lyrebird": [
+        "insects",
+        "fruits",
+        "seeds"
+    ],
+    "Malayan Krait": [
+        "frogs",
+        "lizards",
+        "small mammals"
+    ],
+    "Manatee": [
+        "seagrass",
+        "algae",
+        "water hyacinth"
+    ],
+    "Mandrill": [
+        "fruits",
+        "leaves",
+        "insects"
+    ],
+    "Maned Wolf": [
+        "small mammals",
+        "fruits",
+        "insects"
+    ],
+    "Mantis Shrimp": [
+        "crabs",
+        "mollusks",
+        "fish"
+    ],
+    "Markhor": [
+        "leaves",
+        "grass",
+        "shrubs"
+    ],
+    "Meerkat": [
+        "insects",
+        "small mammals",
+        "roots"
+    ],
+    "Monitor Lizard": [
+        "rodents",
+        "birds",
+        "insects"
+    ],
+    "Mountain Gorilla": [
+        "leaves",
+        "stems",
+        "fruits"
+    ],
+    "Naked Mole Rat": [
+        "tubers",
+        "roots",
+        "leaves"
+    ],
+    "Narwhal": [
+        "fish",
+        "squid",
+        "shrimp"
+    ],
+    "Nudibranch": [
+        "Sea sponges",
+        "hydroids",
+        "barnacles"
+    ],
+    "Numbat": [
+        "termites",
+        "ants",
+        "larvae"
+    ],
+    "Okapi": [
+        "leaves",
+        "fruits",
+        "bark"
+    ],
+    "Orangutan": [
+        "fruits",
+        "leaves",
+        "insects"
+    ],
+    "Pangolin": [
+        "ants",
+        "termites",
+        "larvae"
+    ],
+    "Patagonian Mara": [
+        "grass",
+        "leaves",
+        "seeds"
+    ],
+    "Peacock Mantis Shrimp": [
+        "crabs",
+        "mollusks",
+        "fish"
+    ],
+    "Pink Fairy Armadillo": [
+        "ants",
+        "termites",
+        "larvae"
+    ],
+    "Platypus": [
+        "insects",
+        "crustaceans",
+        "fish"
+    ],
+    "Polar Bear": [
+        "seal",
+        "fish",
+        "birds"
+    ],
+    "Potoo": [
+        "insects",
+        "moths",
+        "beetles"
+    ],
+    "Praying Mantis": [
+        "crickets",
+        "grasshoppers",
+        "flies"
+    ],
+    "Proboscis Monkey": [
+        "leaves",
+        "fruits",
+        "seeds"
+    ],
+    "Pronghorn": [
+        "grass",
+        "forbs",
+        "shrubs"
+    ],
+    "Pufferfish": [
+        "crustaceans",
+        "mollusks",
+        "fish"
+    ],
+    "Quokka": [
+        "grass",
+        "leaves",
+        "fruits"
+    ],
+    "Red Fox": [
+        "rodents",
+        "rabbits",
+        "berries"
+    ],
+    "Red Kangaroo": [
+        "grass",
+        "leaves",
+        "shoots"
+    ],
+    "Red Panda": [
+        "bamboo",
+        "fruits",
+        "leaves"
+    ],
+    "Red-Eyed Tree Frog": [
+        "crickets",
+        "moths",
+        "beetles"
+    ],
+    "Rottweiler": [
+        "beef",
+        "chicken",
+        "fish"
+    ],
+    "Saola": [
+        "leaves",
+        "grass",
+        "fruits"
+    ],
+    "Secretary Bird": [
+        "snakes",
+        "lizards",
+        "rodents"
+    ],
+    "Serval": [
+        "Rodents",
+        "birds",
+        "reptiles"
+    ],
+    "Shoebill": [
+        "fish",
+        "frogs",
+        "reptiles"
+    ],
+    "Shortfin Mako Shark": [
+        "fish",
+        "mackerel",
+        "squid"
+    ],
+    "Siberian Husky": [
+        "meat",
+        "fish",
+        "chicken"
+    ],
+    "Sloth": [
+        "leaves",
+        "fruits",
+        "flowers"
+    ],
+    "Slow Loris": [
+        "insects",
+        "fruits",
+        "leaves"
+    ],
+    "Snow Leopard": [
+        "Blue sheep",
+        "ibex",
+        "marmots"
+    ],
+    "Snowy Owl": [
+        "lemmings",
+        "voles",
+        "rabbits"
+    ],
+    "Spectacled Bear": [
+        "fruits",
+        "leaves",
+        "insects"
+    ],
+    "Sperm Whale": [
+        "squid",
+        "fish",
+        "octopus"
+    ],
+    "Spider Monkey": [
+        "fruits",
+        "leaves",
+        "flowers"
+    ],
+    "Spotted Hyena": [
+        "zebra",
+        "wildebeest",
+        "carrion"
+    ],
+    "Squirrel Monkey": [
+        "fruits",
+        "leaves",
+        "insects"
+    ],
+    "Star-Nosed Mole": [
+        "earthworm",
+        "insects",
+        "small crustaceans"
+    ],
+    "Sumatran Orangutan": [
+        "fruits",
+        "leaves",
+        "flowers"
+    ],
+    "Sumatran Rhinoceros": [
+        "leaves",
+        "fruits",
+        "shoots"
+    ],
+    "Sumatran Tiger": [
+        "Wild boar",
+        "deer",
+        "water buffalo"
+    ],
+    "Sun Bear": [
+        "insects",
+        "honey",
+        "fruits"
+    ],
+    "Tapir": [
+        "leaves",
+        "fruits",
+        "grass"
+    ],
+    "Tarsier": [
+        "insects",
+        "small vertebrates",
+        "fruit"
+    ],
+    "Tasmanian Devil": [
+        "wallabies",
+        "birds",
+        "carrion"
+    ],
+    "Tasmanian Tiger": [
+        "Wallabies",
+        "kangaroos",
+        "small mammals"
+    ],
+    "Termite": [
+        "wood",
+        "leaves"
+    ],
+    "Thorny Devil": [
+        "Ants",
+        "termites",
+        "insects"
+    ],
+    "Three-Toed Sloth": [
+        "leaves",
+        "fruits",
+        "flowers"
+    ],
+    "Tibetan Mastiff": [
+        "meat",
+        "leaves",
+        "grains"
+    ],
+    "Tiger": [
+        "deer",
+        "wild boar",
+        "water buffalo"
+    ],
+    "Titanoboa": [
+        "fish",
+        "crocodiles",
+        "small mammals"
+    ],
+    "Toco Toucan": [
+        "fruits",
+        "insects",
+        "reptiles"
+    ],
+    "Tree Kangaroo": [
+        "leaves",
+        "fruits",
+        "flowers"
+    ],
+    "Tsetse Fly": [
+        "Tsetse fly larvae",
+        "blood",
+        "nectar"
+    ],
+    "Tuatara": [
+        "insects",
+        "small mammals",
+        "bird egg"
+    ],
+    "Tufted Puffin": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Uakari": [
+        "fruits",
+        "seeds",
+        "insects"
+    ],
+    "Vampire Bat": [
+        "blood",
+        "small mammals",
+        "birds"
+    ],
+    "Vaquita": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Vulture": [
+        "carrion",
+        "small mammals"
+    ],
+    "Walrus": [
+        "clam",
+        "mussels",
+        "sea urchins"
+    ],
+    "Warthog": [
+        "roots",
+        "tubers",
+        "grass"
+    ],
+    "Water Buffalo": [
+        "grass",
+        "leaves",
+        "aquatic plants"
+    ],
+    "Western Gorilla": [
+        "leaves",
+        "fruits",
+        "stems"
+    ],
+    "Western Lowland Gorilla": [
+        "leaves",
+        "fruits",
+        "stems"
+    ],
+    "Whale Shark": [
+        "Plankton",
+        "fish",
+        "krill"
+    ],
+    "White Rhinoceros": [
+        "grass",
+        "leaves",
+        "shrubs"
+    ],
+    "White Tiger": [
+        "deer",
+        "wild boar",
+        "water buffalo"
+    ],
+    "Wild Boar": [
+        "roots",
+        "fruits",
+        "small mammals"
+    ],
+    "Wildebeest": [
+        "grass",
+        "leaves",
+        "shoots"
+    ],
+    "Wolf": [
+        "deer",
+        "rabbits",
+        "rodents"
+    ],
+    "Wolverine": [
+        "small mammals",
+        "carrion",
+        "birds"
+    ],
+    "Wombat": [
+        "grass",
+        "roots",
+        "leaves"
+    ],
+    "Woodpecker": [
+        "ants",
+        "beetles",
+        "larvae"
+    ],
+    "Woolly Mammoth": [
+        "grass",
+        "shrubs",
+        "sedges"
+    ],
+    "Yak": [
+        "grass",
+        "leaves",
+        "shrubs"
+    ],
+    "Yellow-Eyed Penguin": [
+        "fish",
+        "squid",
+        "crustaceans"
+    ],
+    "Yeti Crab": [
+        "algae",
+        "small crustaceans",
+        "detritus"
+    ],
+    "Zebra": [
+        "grass",
+        "leaves",
+        "shoots"
+    ],
+    "Zebra Shark": [
+        "crustaceans",
+        "mollusks",
+        "fish"
+    ]
+}

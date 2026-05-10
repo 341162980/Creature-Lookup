@@ -1,0 +1,185 @@
+body {
+    margin: 0;  font-family: Times, sans-serif; background-color: #f8f9fa;
+    min-height: 100vh;  display: flex;  flex-direction: column;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    display: flex;  align-items: center;
+    padding: 25px 40px; background-image: url("/static/images/jungle-leaves.jpeg");
+    background-position: center;  color: white; 
+    flex-wrap: nowrap;
+}
+
+.navbar .logo { font-size: 28px;    font-weight: bold;  margin-right: 30px;}
+
+.logo i {    color: white; font-size: 35px;   }
+
+
+.navbar .nav-links a {
+    color: white;   text-decoration: none;  margin-left: 25px; 
+    font-size: 18px; }
+
+.navbar .nav-links a:hover {    text-decoration: underline; }
+        
+.navbar input[type="text"] {
+    width: 180px;   }
+
+        
+/* ---------- HERO SEARCH ---------- */
+.hero {
+    display: flex;  flex-direction: column; justify-content: flex-start;
+    align-items: flex-start; min-height: 70vh;  text-align: left; padding: 20px 120px;
+    background-color: #eaeeb9; 
+}
+
+.hero h1 { font-size: 18px;  color: #372b03; font-weight: normal; 
+font-family: Garamond, serif;}
+
+
+.paw-side {
+    position: absolute;     bottom: 125px;      display: flex;
+    gap: 18px;              /* spacing between the two columns */
+    pointer-events: none;
+}
+
+.paw-column {
+    display: flex;  flex-direction: column;     gap: 70px;
+}
+
+.paw-column i { font-size: 18px;    color: #4d340d; opacity: 0.5;
+}
+
+.paw-left { left: 30px;     }
+
+.paw-side .paw-column:nth-child(2) {        /*for staggered affect*/
+    margin-top: 30px;
+}
+
+
+.paw-right {    right: 30px;    }
+
+
+/*GRAPHS*/
+
+.graphs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    align-items: stretch;
+}
+
+.graph-card {
+    background: #f0f2d5;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    width: 515px;
+}
+
+.graph-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.graph-card img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+/* ---------- RESULTS ---------- */
+
+.results {
+    flex: 1;    display: flex;  justify-content: center;    padding: 15px;
+    background-color: #eaeeb9
+}
+
+.card {
+    background-color: #eaeeb9;  width: 1050px;
+}
+
+.card h2 {  margin-top: 0;  }
+
+.search-input {     /*search box color*/
+    background-color: #dbebd4f8;   
+    color: #372b03;
+    border: 2px solid #dcdedb;
+    border-radius: 5px;
+}
+
+.search-input::placeholder {
+    color: #342802ad;
+}
+
+.search-wrapper {       /*allows search suggestions to go over hero text*/
+    position: relative;   
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-wrapper button {
+    background-color: #ceeac2f8;
+    color: #372b03;
+    border: 2px solid #dcdedb;
+    border-radius: 5px;
+}
+
+.search-wrapper button:hover {
+    background-color: hsla(101, 35%, 78%, 0.973);
+}
+
+/*SEARCH SUGGESTIONS*/
+.suggestions {
+        background: #c8eab9f8;  position: absolute;  top: 100%;
+        left: 0;    color: #372b03;   width: 300px;
+        max-height: 300px;  overflow-y: auto;
+        border-radius: 5px; z-index: 9999;
+}
+
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background-color: #bcdcaef8;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-image: url("/static/images/bark-texture3.jpeg");
+    background-position: center;  color: white;    padding: 30px 70px;
+    display: flex;  justify-content: space-between; align-items: center;
+    }
+
+
+.footer-logo {  font-size: 23px;    font-weight: bold;
+}
+
+.footer-logo i {    margin-left: 8px;   font-size: 30px}
+
+
+.footer-links { display: flex;  align-items: center;    gap: 50px;  
+            }
+
+.footer-links a {
+    color: rgb(250, 247, 247);   text-decoration: none;  font-size: 18px;    }
+
+.footer-links a:hover { text-decoration: underline; }
+
+.footer-links span {  color: rgb(250, 247, 247); 
+        font-size: 16px;    opacity: 0.8; }

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creature Lookup</title>
+
+    <!--link to index_style.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+
+    <!--link to font awesome (for logo)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        
+        <div class="logo"> Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <form method="POST" action="/" class="search-wrapper">
+            <input type="text" name="animal"
+                class="search-input"
+                placeholder="Enter animal name"
+                required autocomplete="off">
+
+            <button type="submit">Search</button>
+
+            <div class="suggestions"></div>
+        </form>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/List-of-Animals">List of Animals</a>
+            <a href="/food-chains">Food Chains</a>
+            <a href="/graphs">Plots</a>
+            <a href="/contribute">Contribute</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <!-- HERO SEARCH -->
+    <div class="hero">
+
+        <h1>Welcome to Creature Lookup!
+        </h1>
+
+        <h2>Here, you can search for animals in our database and learn
+        awesome facts about them. Feel free to explore the site using the links in the navbar.
+        Please be aware that first time searches make take up to 10 seconds due to map 
+        generation.
+        For a full explanation on the site's functions, visit the "About" page.
+        </h2>
+        
+        <h1>Search for Animal</h1>
+
+        <!-- LEFT SIDE PAWS -->
+        <div class="paw-side paw-left">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE PAWS -->
+        <div class="paw-side paw-right">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+
+        <form method="POST" action="/" class="search-wrapper">
+            <input type="text" name="animal"
+                class="search-input"
+                placeholder="Enter animal name"
+                required autocomplete="off">
+
+            <button type="submit">Search</button>
+
+            <div class="suggestions"></div>
+        </form>      
+
+        <!-- ANIMAL CAROUSEL -->
+        <div class="carousel-wrapper" id="carousel-wrapper">
+            <div class="carousel-track" id="carousel-track">
+                <img src="/static/images/red-eye tree frog.jpeg" class="carousel-img">
+                <img src="/static/images/woolly mammoth.jpeg" class="carousel-img">
+                <img src="/static/images/Squirrel-monkey.jpg" class="carousel-img">
+                <img src="/static/images/Blue Morpho Butterfly.jpeg" class="carousel-img">
+                <img src="/static/images/pangolin.jpeg" class="carousel-img">
+                <img src="/static/images/Humpback-Whale.jpg" class="carousel-img">
+                <img src="/static/images/Frill-Lizard.jpg" class="carousel-img">
+                <img src="/static/images/white-tiger.jpg" class="carousel-img">
+
+                <!-- duplicates for seamless loop -->
+                <img src="/static/images/red-eye tree frog.jpeg" class="carousel-img">
+                <img src="/static/images/woolly mammoth.jpeg" class="carousel-img">
+                <img src="/static/images/Squirrel-monkey.jpg" class="carousel-img">
+                <img src="/static/images/Blue Morpho Butterfly.jpeg" class="carousel-img">
+                <img src="/static/images/pangolin.jpeg" class="carousel-img">
+                <img src="/static/images/Humpback-Whale.jpg" class="carousel-img">
+                <img src="/static/images/Frill-Lizard.jpg" class="carousel-img">
+                <img src="/static/images/white-tiger.jpg" class="carousel-img">
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- RESULTS -->
+    <div class="results">
+                <!--Jinja, Flask’s templating language-->
+        {% if animal %}         <!--If "animal" is not empty, run the code below-->
+
+            <div class="card">
+
+                {#  Jinja expression: {{ }} means "insert a Python value here".
+                animal["Animal"]: Look up value of key "Animal" in dictionary and print it. #}
+                <h2>{{ animal["Animal"] }}</h2> 
+                
+                <table class="stats-table">
+                    <tr>
+                        <th>Height (cm)</th>
+                        <th>Weight (kg)</th>
+                        <th>Lifespan (yrs)</th>
+                        <th>Avg Speed (km/h)</th>
+                        <th>Top Speed (km/h)</th>
+                    </tr>
+                    <tr>
+                        <td>{{ animal["Height (cm)"] }}</td>
+                        <td>{{ animal["Weight (kg)"] }}</td>
+                        <td>{{ animal["Lifespan (years)"] }}</td>
+                        <td>{{ animal["Average Speed (km/h)"] }}</td>
+                        <td>{{ animal["Top Speed (km/h)"] }}</td>
+                    </tr>
+                </table>
+
+                <!-- Everything else stays as list-style info -->
+                <p><strong>Family:</strong> {{ animal["Family"] }}</p>
+                <p><strong>Countries Found:</strong> {{ animal["Countries Found"] }}</p>
+                <p><strong>Habitat:</strong> {{ animal["Habitat"] }}</p>
+                <p><strong>Diet:</strong> {{ animal["Diet"] }}</p>
+                <p><strong>Predators:</strong> {{ animal["Predators"] }}</p>
+                <p><strong>Color:</strong> {{ animal["Color"] }}</p>
+                <p><strong>Conservation Status:</strong> {{ animal["Conservation Status"] }}</p>
+                <p><strong>Social Structure:</strong> {{ animal["Social Structure"] }}</p>
+                <p><strong>Gestation Period (days):</strong> {{ animal["Gestation Period (days)"] }}</p>
+                <p><strong>Offspring per Birth:</strong> {{ animal["Offspring per Birth"] }}</p>
+            </div>
+
+            <!-- RIGHT: image -->
+            <div class="right-panel">
+                {% if image_url %}
+                    <img src="{{ image_url }}" alt="{{ animal["Animal"] }}" class="animal-image">
+                {% endif %}
+
+                {% if map_url %}
+                    <img src="{{ map_url }}" class="animal-map">
+                {% endif %}
+            </div>
+        {% elif searched %}     <!--animal not found-->
+            <p style="color: #100f0fff; font-weight: bold; : center;
+            font-size: 24px;">
+                ❌ Search not found. Check for typos in your search or see the full list for exact animal names.
+            </p>
+        {% endif %}
+    </div>
+
+
+    <!--link to index_js.js -->
+    <script src="{{ url_for('static', filename='js/index_js.js') }}"></script>
+
+</body>
+
+<footer class="footer">
+        <div class="footer-logo">Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/">Dataset</a>
+                <span>© 2026 All rights reserved</span>
+        </div>
+
+</footer>
+
+
+</html>

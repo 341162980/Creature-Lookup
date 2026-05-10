@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creature Lookup</title>
+
+    <!--link to List-of-Animals.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/List-of-Animals.css') }}">
+
+    <!--link to font awesome (for logo)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        
+        <div class="logo"> Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <form method="POST" action="/" class="search-wrapper">
+            <input type="text" name="animal"
+                class="search-input"
+                placeholder="Enter animal name"
+                required autocomplete="off">
+
+            <button type="submit">Search</button>
+
+            <div class="suggestions"></div>
+        </form>
+
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5000">Home</a>
+            <a href="List-of-Animals">List of Animals</a>
+            <a href="/food-chains">Food Chains</a>
+            <a href="/graphs">Plots</a>
+            <a href="/contribute">Contribute</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <!-- HERO SEARCH -->
+    <div class="hero">
+
+        <h1>Here is a list of all the animals in the database. Feel free to search 
+        for your favorite!
+        </h1>
+        
+
+        <!-- LEFT SIDE PAWS -->
+        <div class="paw-side paw-left">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE PAWS -->
+        <div class="paw-side paw-right">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <!--container for scrolling-->
+        <div class="animal-table-container">
+            <div class="animal-table">
+                <table>
+                    <tr>
+                        {% for col in animal_columns %}
+                            <td>
+                                <ul>
+                                    {% for animal in col %}
+                                        <li>{{ animal }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results">
+                <!--Jinja, Flask’s templating language-->
+        {% if animal %}         <!--If "animal" is not empty, run the code below-->
+            <div class="card">
+
+                {#  Jinja expression: {{ }} means "insert a Python value here".
+                animal["Animal"]: Look up value of key "Animal" in dictionary and print it. #}
+                <h2>{{ animal["Animal"] }}</h2> 
+                
+                <p><strong>Height (cm) :</strong> {{ animal["Height (cm)"] }} cm</p>
+                <p><strong>Weight (Kg) :</strong> {{ animal["Weight (kg)"] }} kg</p>
+                <p><strong>Color:</strong> {{ animal["Color"] }}</p>
+                <p><strong>Lifespan (years) :</strong> {{ animal["Lifespan (years)"] }} years</p>
+                <p><strong>Diet:</strong> {{ animal["Diet"] }}</p>
+                <p><strong>Habitat:</strong> {{ animal["Habitat"] }}</p>
+                <p><strong>Predators:</strong> {{ animal["Predators"] }}</p>
+                <p><strong>Average Speed (km/h) :</strong> {{ animal["Average Speed (km/h)"] }} km/h</p>
+                <p><strong>Top Speed (km/h) :</strong> {{ animal["Top Speed (km/h)"] }} km/h</p>
+                <p><strong>Countries Found:</strong> {{ animal["Countries Found"] }}</p>
+                <p><strong>Conservation Status:</strong> {{ animal["Conservation Status"] }}</p>
+                <p><strong>Family:</strong> {{ animal["Family"] }}</p>
+                <p><strong>Gestation Period (days) :</strong> {{ animal["Gestation Period (days)"] }} days</p>
+                <p><strong>Social Structure:</strong> {{ animal["Social Structure"] }}</p>
+                <p><strong>Offspring per Birth:</strong> {{ animal["Offspring per Birth"] }}</p>
+            </div>
+        {% elif searched %}     <!--animal not found-->
+            <p style="color: #100f0fff; font-weight: bold; : center;
+            font-size: 24px;">
+                ❌ Search not found. Check for typos in your search or see the full list for exact animal names.
+            </p>
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo">Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/">Dataset</a>
+                <span>© 2026 All rights reserved</span>
+        </div>
+
+    </footer>
+
+    <!--link to index_js.js -->
+    <script src="{{ url_for('static', filename='js/index_js.js') }}"></script>
+
+</body>
+
+
+</html>

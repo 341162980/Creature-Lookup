@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creature Lookup</title>
+
+    <!--link to List-of-Animals.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/graphs.css') }}">
+
+    <!--link to font awesome (for logo)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        
+        <div class="logo">Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <form method="POST" action="/" class="search-wrapper">
+            <input type="text" name="animal"
+                class="search-input"
+                placeholder="Enter animal name"
+                required autocomplete="off">
+
+            <button type="submit">Search</button>
+
+            <div class="suggestions"></div>
+        </form>
+
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5000">Home</a>
+            <a href="List-of-Animals">List of Animals</a>
+            <a href="/food-chains">Food Chains</a>
+            <a href="/graphs">Plots</a>
+            <a href="/contribute">Contribute</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <!-- HERO SEARCH -->
+    <div class="hero">
+
+        <h1>Here, you can create your own graphs using the data from our database.
+            You can create bar charts, pie charts, scatter plots and heat maps. 
+            
+        </h1>
+
+        <h1>
+            Please be advised that only certain inputs are available for each 
+            type of plot. The bar and pie charts only measure counts for 1 input. 
+            The scatter plots and heat maps allow you to compare 2
+            inputs to one another.
+        <h1>
+        
+
+        <!-- LEFT SIDE PAWS -->
+        <div class="paw-side paw-left">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE PAWS -->
+        <div class="paw-side paw-right">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <div class="graphs-grid">
+
+            <!-- BAR CHART -->
+            <div class="graph-card">
+                <h3>Bar Chart</h3>
+                <form method="POST">
+                    <input type="hidden" name="graph_type" value="bar">
+
+                    <select name="var1" required>
+                        {% set options = ["Height (cm)", "Weight (kg)", "Lifespan (years)", "Average Speed (km/h)", "Top Speed (km/h)", "Gestation Period (days)", "Offspring per Birth", "Diet", "Conservation Status", "Social Structure"] %}
+                        {% for option in options %}
+                            <option {% if bar_var1 == option %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <button type="submit">Generate</button>
+                </form>
+
+                {% if bar_url %}
+                    <img src="{{ bar_url }}">
+                {% endif %}
+            </div>
+
+            <!-- PIE CHART -->
+            <div class="graph-card">
+                <h3>Pie Chart</h3>
+                <form method="POST">
+                    <input type="hidden" name="graph_type" value="pie">
+
+                    <select name="var1" required>
+                        {% set options = ["Height (cm)", "Weight (kg)", "Lifespan (years)", "Average Speed (km/h)", "Top Speed (km/h)", "Gestation Period (days)", "Offspring per Birth", "Diet", "Conservation Status", "Social Structure"] %}
+                        {% for option in options %}
+                            <option {% if pie_var1 == option %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <button type="submit">Generate</button>
+                </form>
+
+                {% if pie_url %}
+                    <img src="{{ pie_url }}">
+                {% endif %}
+            </div>
+
+            <!-- SCATTER -->
+            <div class="graph-card">
+                <h3>Scatter Plot</h3>
+                <form method="POST">
+                    <input type="hidden" name="graph_type" value="scatter">
+
+                    <select name="var1" required>
+                        {% set options = ["Height (cm)", "Weight (kg)", "Lifespan (years)", "Average Speed (km/h)", "Top Speed (km/h)", "Gestation Period (days)", "Offspring per Birth", "Diet", "Conservation Status", "Social Structure"] %}
+                        {% for option in options %}
+                            <option {% if scatter_var1 == option %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <select name="var2" required>
+                        {% set options = ["Height (cm)", "Weight (kg)", "Lifespan (years)", "Average Speed (km/h)", "Top Speed (km/h)", "Gestation Period (days)", "Offspring per Birth", "Diet", "Conservation Status", "Social Structure"] %}
+                        {% for option in options %}
+                            <option {% if scatter_var2 == option %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <button type="submit">Generate</button>
+                </form>
+
+                {% if scatter_url %}
+                    <img src="{{ scatter_url }}">
+                {% endif %}
+            </div>
+
+            <!-- HEATMAP -->
+            <div class="graph-card">
+                <h3>Heatmap</h3>
+                <form method="POST">
+                    <input type="hidden" name="graph_type" value="heatmap">
+
+                    <select name="var1" required>
+                        {% set options = ["Height (cm)", "Weight (kg)", "Lifespan (years)", "Average Speed (km/h)", "Top Speed (km/h)", "Gestation Period (days)", "Offspring per Birth", "Diet", "Conservation Status", "Social Structure"] %}
+                        {% for option in options %}
+                            <option {% if heatmap_var1 == option %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <select name="var2" required>
+                        {% set options = ["Height (cm)", "Weight (kg)", "Lifespan (years)", "Average Speed (km/h)", "Top Speed (km/h)", "Gestation Period (days)", "Offspring per Birth", "Diet", "Conservation Status", "Social Structure"] %}
+                        {% for option in options %}
+                            <option {% if heatmap_var2 == option %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <select name="map_type">
+                        {% set options = ["bilinear", "nearest", "gaussian"] %}
+                        {% for option in options %}
+                            <option {% if heatmap_type == option %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <button type="submit">Generate</button>
+                </form>
+
+                {% if heatmap_url %}
+                    <img src="{{ heatmap_url }}">
+                {% endif %}
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results">
+                <!--Jinja, Flask’s templating language-->
+        {% if animal %}         <!--If "animal" is not empty, run the code below-->
+            <div class="card">
+
+                {#  Jinja expression: {{ }} means "insert a Python value here".
+                animal["Animal"]: Look up value of key "Animal" in dictionary and print it. #}
+                <h2>{{ animal["Animal"] }}</h2> 
+                
+                <p><strong>Height (cm) :</strong> {{ animal["Height (cm)"] }} cm</p>
+                <p><strong>Weight (Kg) :</strong> {{ animal["Weight (kg)"] }} kg</p>
+                <p><strong>Color:</strong> {{ animal["Color"] }}</p>
+                <p><strong>Lifespan (years) :</strong> {{ animal["Lifespan (years)"] }} years</p>
+                <p><strong>Diet:</strong> {{ animal["Diet"] }}</p>
+                <p><strong>Habitat:</strong> {{ animal["Habitat"] }}</p>
+                <p><strong>Predators:</strong> {{ animal["Predators"] }}</p>
+                <p><strong>Average Speed (km/h) :</strong> {{ animal["Average Speed (km/h)"] }} km/h</p>
+                <p><strong>Top Speed (km/h) :</strong> {{ animal["Top Speed (km/h)"] }} km/h</p>
+                <p><strong>Countries Found:</strong> {{ animal["Countries Found"] }}</p>
+                <p><strong>Conservation Status:</strong> {{ animal["Conservation Status"] }}</p>
+                <p><strong>Family:</strong> {{ animal["Family"] }}</p>
+                <p><strong>Gestation Period (days) :</strong> {{ animal["Gestation Period (days)"] }} days</p>
+                <p><strong>Social Structure:</strong> {{ animal["Social Structure"] }}</p>
+                <p><strong>Offspring per Birth:</strong> {{ animal["Offspring per Birth"] }}</p>
+            </div>
+        {% elif searched %}     <!--animal not found-->
+            <p style="color: #100f0fff; font-weight: bold; : center;
+            font-size: 24px;">
+                ❌ Search not found. Check for typos in your search or see the full list for exact animal names.
+            </p>
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo">Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/">Dataset</a>
+                <span>© 2026 All rights reserved</span>
+        </div>
+
+    </footer>
+
+    <!--link to index_js.js -->
+    <script src="{{ url_for('static', filename='js/index_js.js') }}"></script>
+
+</body>
+
+
+</html>

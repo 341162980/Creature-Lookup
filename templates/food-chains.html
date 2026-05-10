@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creature Lookup</title>
+
+    <!--link to List-of-Animals.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/food-chains.css') }}">
+
+    <!--link to font awesome (for logo)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        
+        <div class="logo">Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <form method="POST" action="/food-chains" class="search-wrapper">
+            <input type="text" name="animal"
+                class="search-input"
+                placeholder="Enter animal name"
+                required autocomplete="off">
+
+            <button type="submit">Search</button>
+
+            <div class="suggestions"></div>
+        </form>
+
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5000">Home</a>
+            <a href="List-of-Animals">List of Animals</a>
+            <a href="/food-chains">Food Chains</a>
+            <a href="/graphs">Plots</a>
+            <a href="/contribute">Contribute</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <!-- HERO SEARCH -->
+    <div class="hero">
+
+        <h1>Check out each animal's food chain! Please keep in mind, these don't
+            include every food or every predator for each animal. In addition, 
+            some animals may prey on their predators as well. 
+        </h1>
+        
+
+
+        <!-- LEFT SIDE PAWS -->
+        <div class="paw-side paw-left">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE PAWS -->
+        <div class="paw-side paw-right">
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div class="paw-column">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+            </div>
+        </div>
+
+        <form method="POST" action="/food-chains" class="search-wrapper">
+            <input type="text" name="animal"
+                class="search-input"
+                placeholder="Enter animal name"
+                required autocomplete="off">
+
+            <button type="submit">Search</button>
+
+            <div class="suggestions"></div>
+        </form>    
+        
+        <img src="/static/images/food-chain1.png" class="foodchain-hero-img" id="foodchain-hero-img">
+
+
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results">
+
+        {% if result %}
+            <div class="card">
+                <h2>{{ result.animal.title() }}</h2>
+            </div>
+
+            <div class="food-chain">
+
+                <!-- Predators (top) -->
+                {% if result.predators %}
+                    <div class="chain-row predators">
+                        {% for predator in result.predators %}
+                        <div class="animal-card">
+                            <img src="{{ predator.image }}">
+                            <p>{{ predator.name.title() }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="arrow">
+                        ↓
+                    </div>
+                {% endif %}
+
+                <!-- Center animal -->
+                <div class="chain-center">
+                    <div class="animal-card main-animal">
+                        <img src="{{ result.animal_image }}">
+                        <p>{{ result.animal.title() }}</p>
+                    </div>
+                </div>
+                
+                <div class="arrow">
+                    ↓
+                </div>
+
+                <!-- Foods (bottom) -->
+                <div class="chain-row foods">
+                    {% for food in result.foods %}
+                    <div class="animal-card">
+                        <img src="{{ food.image }}">
+                        <p>{{ food.name.title() }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        {% elif searched %}
+            <p style="font-size:24px; font-weight:bold;">
+                ❌ Animal not found in food chain database.
+            </p>
+        {% endif %}
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo">Creature Lookup <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/">Dataset</a>
+                <span>© 2026 All rights reserved</span>
+        </div>
+
+    </footer>
+
+    <!--link to index_js.js -->
+    <script src="{{ url_for('static', filename='js/index_js.js') }}"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,7 @@
+flask
+pandas
+requests
+wikipedia-api
+geopandas
+matplotlib
+geodatasets
