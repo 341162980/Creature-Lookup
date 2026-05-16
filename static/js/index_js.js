@@ -48,22 +48,7 @@ function submitViaEmail() {
     const data = document.getElementById('new-animal-text').value;
     const subject = encodeURIComponent("Creature Lookup - New Animal Request");
     const body = encodeURIComponent("New animal submission:\n\n" + data);
-
-    const gmailURL = `https://mail.google.com/mail/?view=cm&to=341162980a@gmail.com&su=${subject}&body=${body}`;
-    const mailtoLink = `mailto:341162980a@gmail.com?subject=${subject}&body=${body}`;
-
-    const newTab = window.open(mailtoLink, '_blank');
-
-    setTimeout(() => {
-        try {
-            const href = newTab.location.href;
-            if (!href || href === 'about:blank') {
-                newTab.location.href = gmailURL;
-            }
-        } catch (e) {
-            // if we can't access location, mail client took over — do nothing
-        }
-    }, 500);
+    window.open(`https://mail.google.com/mail/?view=cm&to=341162980a@gmail.com&su=${subject}&body=${body}`, '_blank');
     hideForm('new-animal-form');
 }
 
@@ -93,24 +78,10 @@ function submitChangeViaEmail() {
     const data = document.getElementById('data-change-text').value;
     const subject = encodeURIComponent("Creature Lookup - Data Change Request");
     const body = encodeURIComponent("Data change submission:\n\n" + data);
-
-    const gmailURL = `https://mail.google.com/mail/?view=cm&to=341162980a@gmail.com&su=${subject}&body=${body}`;
-    const mailtoLink = `mailto:341162980a@gmail.com?subject=${subject}&body=${body}`;
-
-    const newTab = window.open(mailtoLink, '_blank');
-
-    setTimeout(() => {
-        try {
-            const href = newTab.location.href;
-            if (!href || href === 'about:blank') {
-                newTab.location.href = gmailURL;
-            }
-        } catch (e) {
-            // if we can't access location, mail client took over — do nothing
-        }
-    }, 500);
+    window.open(`https://mail.google.com/mail/?view=cm&to=341162980a@gmail.com&su=${subject}&body=${body}`, '_blank');
     hideForm('data-change-form');
 }
+
 
 // hide carousel when results are shown
 window.addEventListener('DOMContentLoaded', () => {
