@@ -16,10 +16,6 @@ HOW TO USE:
 7. Open http://127.0.0.1:5000 in your browser
 8. To quit, type ctrl c in the terminal and the web server will close
 
-TO DOS: 
-
-    -Take images of site on github, mailto function doesn't work on windows
-
 
 Technologies Used
 
